@@ -41,13 +41,23 @@ menuToggleIcon.addEventListener('click', toggleMenu);
 
 const bodyElement = selector('body');
 const themeToggleButton = selector('#theme-toggle-button');
+const theme = localStorage.getItem('theme');
+
+if(theme != null){
+    bodyElement.classList.add('light-theme');
+    themeToggleButton.classList.add('activated');
+}
 
 const toggleTheme = () =>{
     bodyElement.classList.toggle('light-theme');
     themeToggleButton.classList.toggle('activated');
     
-    
-}
+    if(bodyElement.classList.contains('light-theme')){
+        localStorage.setItem('theme', 'light-theme');
+    }else{
+        localStorage.removeItem('theme');
+    }
 
-bodyElement.addEventListener('click', toggleTheme);
+    }
+    themeToggleButton.addEventListener('click', toggleTheme);
 // Swiper
