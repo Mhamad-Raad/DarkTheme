@@ -39,4 +39,15 @@ menuToggleIcon.addEventListener('click', toggleMenu);
 
 // Switch theme/add to local storage
 
+const bodyElement = selector('body');
+const themeToggleButton = selector('#theme-toggle-button');
+
+const toggleTheme = () =>{
+    bodyElement.classList.toggle('light-theme');
+    themeToggleButton.classList.toggle('activated');
+    
+    
+}
+
+bodyElement.addEventListener('click', toggleTheme);
 // Swiper
