@@ -40,6 +40,7 @@ body{
     background-color: var(--primary-background-color);
     letter-spacing: 1px;
     transition: background-color .25s, color .25s;
+    
 }
 a{
     text-decoration: none;
@@ -186,8 +187,70 @@ body.light-theme{
 
 /* Search */
 
-/* Form JavaScript styles */
+.search-form-container{
+    z-index: 10010;
+    display: flex;
+    position:fixed;
+    background-color: var(--primary-background-color);
+    top:0;
+    right:0;
+    width: 100%;
+    height:100vh;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .3s ease-out, transform .3s ease-out;
+}
 
+.form-container-inner{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--gap);
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+.form-input, .form-btn{
+    display: inline-block;
+    border: 2px solid var(--secondary-background-color);
+    padding: 1.5rem;;
+}
+
+.form-input{
+    width: 100%;
+    border-right:none;
+}
+
+.form-btn{
+    margin-left: -.5rem;
+    border-left:none;
+    background-color: var(--secondary-background-color);
+    width: 8rem;
+}
+
+.form-note{
+    font-size: var(--font-size-xsm);
+    color: var(--light-color-alt);
+    align-self: flex-end;
+}   
+
+.form-close-btn{
+   position: absolute;
+   top: 1.5rem;
+   right: 1.5rem;
+   border: 2px solid var(--secondary-background-color);
+}
+
+/* Form JavaScript styles */
+.search-form-container.activated{
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .5s ease-in-out;
+}
 /* Featured articles */
 
 /* Featured articles - Sidebar */

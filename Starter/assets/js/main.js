@@ -35,8 +35,28 @@ menuToggleIcon.addEventListener('click', toggleMenu);
 
 // Open/Close search form popup
 
+const formPopUp = selector('#search-form-container');
+const searchButton = selector('#search-icon');
+const formCloseButton = selector('#form-close-btn');
+
+const formPopUpToggle = () =>{
+    formPopUp.classList.add('activated');
+}
+
+const formCloseToggle = () =>{
+    formPopUp.classList.remove('activated');
+}
+
+searchButton.addEventListener('click', formPopUpToggle);
+formCloseButton.addEventListener('click', formCloseToggle);
+
 // -- Close the search form popup on ESC keypress
 
+window.addEventListener('keyup', (event) =>{
+    if(event.key === 'Escape'){
+        formCloseToggle();
+    }
+});
 // Switch theme/add to local storage
 
 const bodyElement = selector('body');
