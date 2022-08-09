@@ -95,6 +95,13 @@ body.light-theme{
     } */
 }
 
+.d-grid{
+    display: grid;
+}
+.section{
+    padding-block: 5rem;
+}
+
 /* Header */
 .header{
     background-color: var(--secondary-background-color);
@@ -251,8 +258,96 @@ form{
     transform: scale(1);
     transition: opacity .5s ease-in-out;
 }
-/* Featured articles */
 
+/* Featured articles */
+.featured-articles{
+    padding-block: 2rem;
+
+}
+.section-header-offset{
+    margin-top: 7.5rem;
+}
+
+.featured-articles-container, .featured-content{
+    gap: var(--gap);
+}
+
+.headline-banner{
+    background-color: var(--secondary-background-color);
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-xsm);
+    gap: var(--gap);
+    height: 100%;
+}
+.headline{
+    color: var(--light-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: .4rem;
+}
+.headline span{
+    height: inherit;
+}
+.fancy-border{
+   position: relative;
+   overflow: hidden;
+}
+
+.fancy-border ::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: var(--gradient-color);
+    background-size: 50% 100%;
+    z-index: -1;
+
+}
+.fancy-border span{
+    position: relative;
+    z-index: 10;
+    display: inline-flex;
+    padding: .6rem 1.4rem;
+    background-color: var(--secondary-background-color);
+}
+.article{
+    position: relative;
+    min-height: var(--item-min-height-md);
+}
+
+.article-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .25s;
+}
+
+.article-category{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background-color: var(--primary-background-color);
+    color: var(--light-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    z-index: 10;
+
+}
+.article-data-container{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    padding: 2rem 1.5rem;
+    background-color: var(--transparent-dark-color);
+    z-index: 10;
+    width: 100%;
+}
 /* Featured articles - Sidebar */
 
 /* Quick read */
