@@ -348,6 +348,34 @@ form{
     z-index: 10;
     width: 100%;
 }
+.article:hover .article-data-container{
+    background-color: var(--hover-dark-color);
+    color: var(--hover-light-color);
+}
+.article:hover .article-data-spacer{
+    background-color: var(--hover-light-color);
+}
+.article-data{
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    font-size: var(--font-size-xsm);
+    margin-bottom: 1rem;
+}
+.article-data-spacer{
+    width: .5rem;
+    height: .5rem;
+    background-color: var(--light-color-alt);
+    transform: rotate(45deg);
+}
+.title{
+    color:var(--light-color);
+
+}
+
+.article-title{
+    font-size: var(--font-size-md);
+}
 /* Featured articles - Sidebar */
 
 /* Quick read */
