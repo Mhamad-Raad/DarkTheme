@@ -74,7 +74,7 @@ const toggleTheme = () =>{
     
     if(bodyElement.classList.contains('light-theme')){
         localStorage.setItem('theme', 'light-theme');
-    }else{
+    } else{
         localStorage.removeItem('theme');
     }
 
