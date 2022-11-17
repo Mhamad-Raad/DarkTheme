@@ -393,9 +393,9 @@ form{
 
 }
 .article-data-container{
+    position: absolute;
     bottom: 0;
     width: 100%;
-    position: absolute;
     background-color: var(--transparent-dark-color);
 
 }
